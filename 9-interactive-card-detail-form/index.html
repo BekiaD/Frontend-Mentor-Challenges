@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+  <header>
+    <section>
+      <img class="card-img" id="card-back" src="./images/bg-card-back.png" alt="credit card backside">
+      <img class="card-img" id="card-front" src="./images/bg-card-front.png" alt="credit card frontside">
+    </section>
+
+    <p class="cvc-placeholder">000</p>
+
+    <div class="name-exp">
+      <div id="info1">
+        <img id="card-logo" src="./images/card-logo.svg" alt="card logo" />
+        <p class="card-number-placeholder">0000 0000 0000 0000</p>
+      </div>
+      <div id="info2">
+        <p class="card-name-placeholder">Jane Appleseed</p>
+        <p>
+          <span class="expiry-month-placeholder">00</span>
+          /
+          <span class="expiry-year-placeholder">00</span>
+        </p>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+    <form id="form" action="">
+      <label for="name">CARDHOLDER NAME</label>
+      <input type="text" id="name" name="name" class="card-name" placeholder="e.g. Jane Appleseed">
+      <label for="card-num">CARD NUMBER</label>
+      <input type="number" id="card-num" name="card number" class="card-number" placeholder="e.g. 1234 5678 9123 0000" min="2" max="3">
+      <div id="expiry-div">
+        <div id="third-input">
+          <label for="month">EXP. DATE (MM/YY) </label>
+          <div id="monthyear">
+            <input type="number" id="month" name="month" class="expiry-date-month" placeholder="MM">
+            <input type="number" name="year" class="expiry-date-year" placeholder="YY">
+          </div>
+        </div>
+        <div id="fourth-input">
+          <label for="cvc-num">CVC</label>
+          <input type="number" id="cvc-num" name="cvc" class="cvc" placeholder="e.g. 123">
+        </div>
+      </div>
+      <button type="submit" id="btn">Confirm</button>
+    </form>
+    <div class="success-msg" id="success">
+      <img class="success-img" src="images/icon-complete.svg" alt="success image">
+      <p class="success-note">Thank You!</p>
+      <p class="success-subnote">We've added your card details</p>
+      <button type="submit" id="button">Confirm</button>
+    </div>
+  </main>
+
+
+  <div class="attribution" style="display: none">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">BekiaD</a>.
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

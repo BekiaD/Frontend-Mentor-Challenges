@@ -1,0 +1,310 @@
+/* For number input display */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* input[type=number] {
+    -moz-appearance: textfield;
+} */
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    display: block;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* Styling */
+
+body {
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+header {
+    background-image: url(./images/bg-main-mobile.png);
+    background-size: cover;
+    height: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-img {
+    width: 288px;
+    height: 160px;
+    position: relative;
+}
+
+#card-back {
+    top: 1.8rem;
+    margin-left: 4.3rem;
+}
+
+#card-front {
+    bottom: 2.5rem;
+    left: 0.6rem;
+}
+
+.cvc-placeholder {
+    position: relative;
+    top: -13.7rem;
+    margin-left: 17rem;
+    font-size: 0.7rem;
+}
+
+.name-exp {
+    text-transform: uppercase;
+    position: relative;
+    bottom: 13.7rem;
+    right: 1.7rem;
+    padding: 1rem
+}
+
+#card-logo {
+    width: 3rem;
+}
+
+.card-number-placeholder {
+    font-size: 1.2rem;
+    letter-spacing: 0.13rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+#info2 {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 0.13rem;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 4.6rem 1.9rem;
+}
+
+.hideform {
+    display: none;
+}
+
+label {
+    color: #220a30;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+}
+
+input {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.6rem;
+    margin-bottom: 1.5rem;
+
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #220a30;
+}
+
+#expiry-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem
+}
+
+#third-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+#monthyear {
+    display: flex;
+    flex-direction: row;
+    gap: 0.8rem;
+}
+
+#fourth-input {
+    width: 100%;
+}
+
+button {
+    background-color: #220a30;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    color: white;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+::placeholder {
+    color: lightgray
+}
+
+input:focus {
+    outline: none !important;
+    border: 1px solid purple;
+}
+
+.error-msg {
+    color: red;
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.success-msg {
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #220a30;
+}
+
+.success-note {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.success-subnote {
+    color: grey;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    body {
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+    }
+
+    header {
+        background-image: url(./images/bg-main-desktop.png);
+        height: 100%;
+        width: 530px;
+        margin-right: 5rem;
+    }
+
+    .card-img {
+        width: 450px;
+        height: 250px;
+    }
+
+    #card-back {
+        top: 26rem;
+        left: 13rem
+    }
+
+    #card-front {
+        bottom: 8.5rem;
+        left: 12rem;
+    }
+
+    .cvc-placeholder {
+        position: relative;
+        top: -2.5rem;
+        left: 16rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.1rem;
+    }
+
+    .card-number-placeholder {
+        font-size: 1.7em;
+        letter-spacing: 0.3rem;
+        margin-top: 4rem;
+    }
+
+    #info2 {
+        font-size: 0.9rem;
+        color: ghostwhite;
+    }
+
+    .name-exp {
+        bottom: 24.6rem;
+        left: 10rem;
+        margin-left: 1rem
+    }
+
+    #card-logo {
+        width: 85px
+    }
+
+    main {
+        width: 40%;
+        padding-left: 10rem;
+        /* padding-right: 3rem; */
+        margin-bottom: 10rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+
+
+    label {
+        font-weight: 500;
+        font-size: 0.8rem;
+    }
+
+    input {
+        padding: 0.7rem;
+        font-size: 1rem;
+        margin-top: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    button {
+        padding: 0.7rem;
+    }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- My CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+    <body class="flex flex-col justify-center h-screen sm:items-center">
+      <main class="bg-neutral-50 m-5 py-9 px-6 max-w-screen-md w-full sm:max-w-min sm:px-20">
+
+    <section class="date-picker">
+      <form class="flex flex-row justify-evenly sm:justify-start sm:gap-5">
+        <div class="flex flex-col ">
+          <label for="days" class="mb-1  uppercase tracking-widest text-xs text-neutral-500 font-bold">
+            Day</label>
+          <input required type="number" min="1" max="31" id="day-input" name="days" placeholder="DD"
+            class=" border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16 sm:w-24 hover:border-violet-600 outline-none" />
+        </div>
+        <div class="flex flex-col">
+          <label for="months" class="mb-1 uppercase tracking-widest text-xs text-neutral-500 font-bold">
+            Month</label>
+          <input required type="number" min="1" max="12"  id="month-input" name="months" placeholder="MM"
+            class="border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16 sm:w-24 hover:border-violet-600 outline-none" />
+        </div>
+        <div class="flex flex-col">
+          <label for="years" class="mb-1  uppercase tracking-widest text-xs text-neutral-500 font-bold">
+            Year</label>
+          <input required type="number" min="1940" max="2024"  id="year-input" name="years" placeholder="YYYY"
+            class="border border-gray-300 rounded-md text-sm font-bold text-neutral-900 py-2 pl-2 w-16 sm:w-24 hover:border-violet-600 outline-none" />
+        </div>
+    </section>
+
+    <section class="my-8 sm:my-2">
+      <div class="relative flex items-center">
+        <!-- Button -->
+        <button id="btn" type="submit" class="m-auto bg-violet-500 rounded-full z-10 sm:mr-0">
+          <img src="assets/images/icon-arrow.svg" alt="white down arrow" class="p-2 sm:p-3 w-10 sm:w-14 z-10 hover:bg-neutral-900 hover:rounded-full">
+        </button>
+      </form>
+        <!-- Horizontal Line -->
+        <div id="line" class="absolute w-full h-px bg-neutral-300 top-1/2 left-0 transform -translate-y-1/2 z-0 "></div>
+      </div>
+    </section>
+
+    <section class="date-display">
+      <p class="italic font-extrabold text-5xl sm:text-6xl  tracking-wide"> <span id="years"
+          class="year italic text-violet-500 font-extrabold text-5xl sm:text-6xl tracking-wide">--</span>
+        years</p>
+      <p class="py-1 italic font-extrabold text-5xl sm:text-6xl  tracking-wide"><span id="months"
+          class="month italic text-violet-500 font-extrabold text-5xl sm:text-6xl  tracking-wide">--</span>
+        months</p>
+      <p class="italic font-extrabold text-5xl sm:text-6xl  tracking-wide"> <span id="days"
+          class="day italic text-violet-500 font-extrabold text-5xl sm:text-6xl  tracking-wide">--</span>
+        days</p>
+    </section>
+
+
+  </main>
+
+  <div class="attribution" style="display:none">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Beks</a>.
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

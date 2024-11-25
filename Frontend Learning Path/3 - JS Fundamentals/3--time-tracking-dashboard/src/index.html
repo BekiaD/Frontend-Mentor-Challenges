@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="./output.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+</head>
+
+<body class="font-Rubik bg-black text-light font-light w-screen h-screen flex items-center justify-center">
+  <main class="flex flex-col gap-4 sm:grid sm:grid-cols-2 sm:grid-rows-2 sm:gap-4 ">
+    <section id="main" class="bg-blue rounded-xl sm:grid sm:row-span-2">
+      <div id="info"
+        class="bg-burple flex px-7 py-5 rounded-xl justify-center items-center sm:flex-col sm:items-start sm:px-1">
+        <img id="avatar" src="../images/profile.jpeg" alt="avatar"
+          class="border-2 rounded-full border-white w-14 h-16 sm:mx-3">
+        <div id="title" class="pl-5">
+          <p class="text-sm sm:pt-6 sm:pb-2">Report for</p>
+          <h1 class="text-white text-lg tracking-wide sm:text-3xl sm:max-w-10">Rebeka - BekiaD</h1>
+        </div>
+      </div>
+      <div id="timeline" class="flex justify-between text-dark p-4 text-sm sm:flex-col sm:py-4 sm:gap-4 sm:px-5">
+        <button id="dailybtn"
+          class="active:text-white hover:text-white hover:animate-pulse sm:flex sm:justify-start">Daily</button>
+        <button id="weeklybtn"
+          class="active:text-white hover:text-white hover:animate-pulse sm:flex sm:justify-start">Weekly</button>
+        <button id="monthlybtn"
+          class="active:text-white hover:text-white hover:animate-pulse sm:flex sm:justify-start">Monthly</button>
+      </div>
+    </section>
+
+    <section class="bg-orange flex flex-col rounded-xl sm:w-56">
+      <img src="../images/icon-work.svg" alt="laptop-bag" class="self-end w-10 h-8">
+      <div id="work"
+        class="bg-blue p-4 rounded-xl text-white  grid grid-cols-2 items-center sm:grid-cols-2 sm:grid-rows-3 sm:h-full hover:bg-des-blue hover:animate-wiggle">
+        <h2 class="font-normal self-center place-self-start text-md">Work</h2>
+        <div class="self-center place-self-end">
+          <button id="btn-work">
+            <img src="../images/icon-ellipsis.svg" alt="...">
+          </button>
+          <div id="select-div-work"
+            class="select-div rounded-tr-xl rounded-br-xl rounded-bl-xl bg-burple flex flex-col items-start text-xs absolute">
+          </div>
+        </div>
+        <h3 class="self-center place-self-start text-xl sm:text-3xl sm:row-start-2 sm:px-2 sm:col-span-2"><span class=""
+            id="work-hrs">XX</span> hrs</h3>
+        <p class="text-xs text-light self-center place-self-end sm:row-start-3 ">Last <span
+            class="dynamic-time">Day</span> - <span id="opp-work-hrs">xx</span> hrs</p>
+      </div>
+    </section>
+
+    <section class="bg-babyblue flex flex-col rounded-xl sm:w-56">
+      <img src="../images/icon-play.svg" alt="laptop-bag" class="ellipsis self-end w-10 h-8">
+      <div
+        class="bg-blue p-4 rounded-xl text-white  grid grid-cols-2 items-center sm:grid-cols-2 sm:grid-rows-3  sm:h-full hover:bg-des-blue hover:animate-wiggle ">
+        <h2 class="font-normal self-center place-self-start text-md">Play</h2>
+        <div class="self-center place-self-end">
+          <button id="btn-play">
+            <img src="../images/icon-ellipsis.svg" alt="...">
+          </button>
+          <div id="select-div-play"
+            class="select-div rounded-tr-xl rounded-br-xl rounded-bl-xl bg-burple flex flex-col items-start text-xs absolute">
+          </div>
+        </div>
+        <h3 class="self-center place-self-start text-xl sm:text-3xl sm:row-start-2 sm:px-2 sm:col-span-2"><span
+            id="play-hrs">XX</span> hrs</h3>
+        <p class="text-xs text-light self-center place-self-end sm:row-start-3">Last <span
+            class="dynamic-time">Day</span> - <span id="opp-play-hrs">xx</span> hrs</p>
+      </div>
+    </section>
+
+    <section class="bg-red flex flex-col rounded-xl sm:w-56">
+      <img src="../images/icon-study.svg" alt="laptop-bag" class="ellipsis self-end w-10 h-8">
+      <div
+        class="bg-blue p-4 rounded-xl text-white  grid grid-cols-2 items-center sm:grid-cols-2 sm:grid-rows-3  sm:h-full hover:bg-des-blue hover:animate-wiggle">
+        <h2 class="font-normal self-center place-self-start text-md">Study</h2>
+        <div class="self-center place-self-end">
+          <button id="btn-study">
+            <img src="../images/icon-ellipsis.svg" alt="...">
+          </button>
+          <div id="select-div-study"
+            class="select-div rounded-tr-xl rounded-br-xl rounded-bl-xl bg-burple flex flex-col items-start text-xs absolute">
+          </div>
+        </div>
+        <h3 class="self-center place-self-start text-xl sm:text-3xl sm:row-start-2 sm:px-2 sm:col-span-2"><span
+            id="study-hrs">XX</span> hrs</h3>
+        <p class="text-xs text-light self-center place-self-end sm:row-start-3">Last <span
+            class="dynamic-time">Day</span> - <span id="opp-study-hrs">xx</span> hrs</p>
+      </div>
+    </section>
+
+    <section class=" bg-green flex flex-col rounded-xl sm:col-start-2 sm:row-start-2 sm:w-56">
+      <img src="../images/icon-exercise.svg" alt="laptop-bag" class="ellipsis self-end w-10 h-8">
+      <div
+        class="bg-blue p-4 rounded-xl text-white  grid grid-cols-2 items-center sm:grid-cols-2 sm:grid-rows-3  sm:h-full hover:bg-des-blue hover:animate-wiggle">
+        <h2 class="font-normal self-center place-self-start text-md">Exercise</h2>
+        <div class="self-center place-self-end">
+          <button id="btn-exercise" class="self-center place-self-end">
+            <img src="../images/icon-ellipsis.svg" alt="...">
+          </button>
+          <div id="select-div-exercise"
+            class="select-div rounded-tr-xl rounded-br-xl rounded-bl-xl bg-burple flex flex-col items-start text-xs absolute">
+          </div>
+        </div>
+        <h3 class="self-center place-self-start text-xl sm:text-3xl sm:row-start-2 sm:px-2 sm:col-span-2"><span
+            id="exercise-hrs">XX</span> hrs</h3>
+        <p class="text-xs text-light self-center place-self-end sm:row-start-3">Last <span
+            class="dynamic-time">Day</span> - <span id="opp-exercise-hrs">xx</span> hrs</p>
+      </div>
+    </section>
+
+    <section class="bg-purple flex flex-col rounded-xl sm:col-start-3 sm:row-start-2 sm:w-56">
+      <img src="../images/icon-social.svg" alt="laptop-bag" class="ellipsis self-end w-10 h-8">
+      <div
+        class="bg-blue p-4 rounded-xl text-white  grid grid-cols-2 items-center sm:grid-cols-2 sm:grid-rows-3  sm:h-full hover:bg-des-blue hover:animate-wiggle">
+        <h2 class="font-normal self-center place-self-start text-md">Social</h2>
+        <div class="self-center place-self-end">
+          <button id="btn-social" class="self-center place-self-end">
+            <img src="../images/icon-ellipsis.svg" alt="...">
+          </button>
+          <div id="select-div-social"
+            class="select-div rounded-tr-xl rounded-br-xl rounded-bl-xl bg-burple flex flex-col items-start text-xs absolute">
+          </div>
+        </div>
+        <h3 class="self-center place-self-start text-xl sm:text-3xl sm:row-start-2 sm:px-2 sm:col-span-2"><span
+            id="social-hrs">XX</span> hrs</h3>
+        <p class="text-xs text-light self-center place-self-end sm:row-start-3">Last <span
+            class="dynamic-time">Day</span> - <span id="opp-social-hrs">xx</span> hrs</p>
+      </div>
+    </section>
+
+    <section class="bg-yellow flex flex-col rounded-xl sm:col-start-4 sm:row-start-2 sm:w-56">
+      <img src="../images/icon-self-care.svg" alt="laptop-bag" class="ellipsis self-end w-10 h-8">
+      <div
+        class="bg-blue p-4 rounded-xl text-white  grid grid-cols-2 items-center sm:grid-cols-2 sm:grid-rows-3  sm:h-full hover:bg-des-blue hover:animate-wiggle">
+        <h2 class="font-normal self-center place-self-start text-md">Self Care</h2>
+        <div class="self-center place-self-end">
+          <button id="btn-selfcare" class="self-center place-self-end">
+            <img src="../images/icon-ellipsis.svg" alt="...">
+          </button>
+          <div id="select-div-selfcare"
+            class="select-div rounded-tr-xl rounded-br-xl rounded-bl-xl bg-burple flex flex-col items-start text-xs absolute">
+          </div>
+        </div>
+        <h3 class="self-center place-self-start text-xl sm:text-3xl sm:row-start-2 sm:px-2 sm:col-span-2"><span
+            id="selfcare-hrs">XX</span> hrs</h3>
+        <p class="text-xs text-light self-center place-self-end sm:row-start-3">Last <span
+            class="dynamic-time">Day</span> - <span id="opp-selfcare-hrs">xx</span> hrs</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="attribution" style="display: none">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/home">BekiaD</a>.
+  </div>
+  <script type="module" src="index.js"></script>
+</body>
+
+</html>

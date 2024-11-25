@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <!-- Font awesome -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Product preview card component</title>
+</head>
+
+<body class="bg-zinc-100 min-h-screen flex justify-center items-center">
+
+  <main class="container mx-3 my-6  rounded-lg bg-white flex flex-col justify-center 
+              md:flex-row md:w-1/2">
+
+              
+    <section class="hero md:hidden">
+      <img src="images/image-product-mobile.jpg" class="rounded-t-lg" />
+    </section>
+
+    <section class="hero hidden md:flex md:w-1/2">
+      <img src="images/image-product-desktop.jpg" class="rounded-l-lg w-full" alt="Desktop Perfume Image" />
+    </section>
+
+    <section class="overview p-5 md:w-1/2 md:p-8">
+      <div class="prod-title">
+        <p class="uppercase tracking-widest text-sm text-gray-400">P e r f u m e</p>
+        <p class="py-4 font-serif font-black text-3xl text-gray-900 font-bold"> Gabrielle Essence Eau De Parfum</p>
+      </div>
+
+      <div class="prod-info">
+        <p class="text-gray-400 text-lg"> A floral, solar and voluptuous interpretation composed by Olivier Polge,
+          Perfumer-Creator for the House of CHANEL.</p>
+      </div>
+
+      <div class="prod-price py-3 flex flex-row items-center">
+        <p class="pr-6 font-serif font-bold text-4xl md:text-3xl text-emerald-600">$149.99</p>
+        <p class=" text-lg  text-gray-400 line-through">$169.99</p>
+      </div>
+
+      <div class="btn flex justify-center"> <button
+          class="bg-emerald-600 rounded-lg w-full py-3 my-3 text-white text-lg  transition ease-in duration-200 hover:bg-emerald-900 focus:outline-none">
+          <i class="fa fa-shopping-cart" style="color: #ffffff;"></i>
+          Add to Cart</button>
+      </div>
+
+    </section>
+  </main>
+
+  <div class="attribution" style="display:none">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Beks</a>.
+  </div>
+
+
+</body>
+
+</html>
